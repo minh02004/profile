@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Teko:wght@300&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❤️
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❤️
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❤️
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❤️
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❤️
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❤️
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+    <div class="snowflake">
+      ❅
+    </div>
+    <div class="snowflake">
+      ❆
+    </div>
+  </div>
+</head>
+
+<body onclick="audio.play()">
+  <header>
+    <center>
+      <h2 class="t-text">DEVELOPER - DESIGNER</h2>
+    </center>
+  </header>
+  <div>
+    <img class="display-img" src="images/logo.png" alt="Ảnh đại diện">
+    <h1 class="f-text">Phạm Ngọc Minh <img src="images/vietnam-number-one.gif" width="24" height="24" alt="Verified">
+    </h1>
+    <p class="s-text">@meimei204 <img width="13px" height="13px" src="images/vuong-mien.webp"></p>
+  </div>
+  <br>
+  <!-- lien ket tcn -->
+  <div class="link">
+    <a class="lightpink n-text" href="https://zalo.me/meimei204" target="_blank"><i
+        class="fa fa-address-card"></i>zalo</a>
+    <a class="dodgerblue n-text" href="https://www.facebook.com/meimei004/" target="_blank"><i
+        class="fa fa-facebook-square"></i> Facebook</a>
+    <a class="lightpink n-text" href="https://zalo.me/0586546387" target="_blank"><i
+        class="fa fa-address-card"></i>zalo</a>
+  </div>
+  <br>
+  <center>
+    <hr color="snow" width="350px" size="1px" align="center" />
+  </center>
+  <br>
+
+  <div class="bank">
+    <span class="f-text">Donate</span>
+    <p>
+      <img class="display-bank" src="images/momo.jpg" alt="momo_bank">
+    <h3 class="v-text">MOMO</h3>
+    <br>
+    <h2 class="n-text">
+      <p>STK :03982xxxxx </p>
+      <p>CTK : Phạm Ngọc Minh</p>
+    </h2>
+    <br>
+    <img class="display-bank" src="images/mb-bank.webp" alt="mb_bank">
+    <h3 class="v-text">MB BANK</h3>
+    <br>
+    <h2 class="n-text">
+      <p>STK : xxxxxxxxxxx</p>
+      <p>CTK : Phạm Ngọc Minh</p>
+    </h2>
+    </p>
+  </div>
+  <!-- <img id="kbn" class="animated bounceInRight" src="images/bn.png"> -->
+  <br>
+  <footer>
+    <p class="n-text">meimei2004 - @2023</p>
+  </footer>
+  <!-- <script>
+    var audio = new Audio('audio/snmedm.mp3',
+    );
+
+    audio.oncanplaythrough = function () {
+      audio.play();
+    }
+
+    audio.loop = true;
+
+    audio.onended = function () {
+      audio.play();
+    }
+
+  </script> -->
+  <script>
+    // Danh sách các bài hát
+    var tracks = [
+      'audio/snmedm.mp3',
+      'audio/1.mp3',
+      'audio/2.mp3'
+    ];
+  
+    var currentTrack = 0;
+    var audio = new Audio(tracks[currentTrack]);
+  
+    audio.loop = false; // Tắt loop từng bài, để tự chuyển bài
+  
+    audio.oncanplaythrough = function () {
+      audio.play();
+    }
+  
+    // Khi bài hát kết thúc, chuyển sang bài tiếp theo
+    audio.onended = function () {
+      currentTrack++;
+      if (currentTrack >= tracks.length) {
+        currentTrack = 0; // Quay lại bài đầu nếu hết danh sách
+      }
+      audio.src = tracks[currentTrack];
+      audio.load(); // Nạp bài mới
+    }
+  
+    // Bắt đầu phát
+    audio.load();
+  </script>
+  
+  <script>
+    Swal.fire();
+
+    Swal.fire(
+      'WELCOME',
+      '',
+      'success'
+    )
+  </script>
+</body>
+
+</html>
